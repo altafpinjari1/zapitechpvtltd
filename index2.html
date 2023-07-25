@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logo Particles</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: auto !important;
+        height: 150vh;
+        background-color: black;
+      }
+    @media screen and (min-width:351px) and (max-width:700px) {
+        .first{
+        position: absolute;
+     height: 100px;
+     margin: auto;
+    top: 20px;
+    left: 20px;
+     z-index: 9 !important;
+     animation: mymove 2s infinite;
+}
+
+    }
+    @media screen and (min-width:701px) and (max-width:1200px) {
+        .first{
+        position: absolute;
+     height: 100px;
+     margin: auto;
+    top: 20px;
+    left: 20px;
+     z-index: 9 !important;
+     animation: mymove 2s infinite;
+}
+
+    }
+    @media screen and (min-width:1201px) and (max-width:1900px) {
+        .first{
+        position: absolute;
+     height: 100px;
+     margin: auto;
+    top: 20px;
+    left: 20px;
+     z-index: 9 !important;
+     animation: mymove 2s infinite;
+}
+
+    }
+    @media screen and (min-width:1901px) {
+        .first{
+        position: absolute;
+     height: 100px;
+     margin: auto;
+    top: 20px;
+    left: 20px;
+     z-index: 9 !important;
+     animation: mymove 2s infinite;
+}
+/* .first img{
+    height: 200px !important;
+    } */
+  }
+@keyframes mymove {
+    from {rotate: 0deg;}
+  to {rotate: 360deg;}
+  
+}
+   .first img{
+    height: 100px;
+    top: -250px;
+    z-index: 9 !important;
+  
+   }
+      .second{
+        height: 300px;
+     margin: auto !important;
+     display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh;
+        background-color:black;
+        margin-top: 100px;
+      }
+      @media screen and (min-width:280px) and (max-width:350px) {
+        .second img{
+            height: 250px;
+            margin: auto !important;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }  .first{
+        position: absolute;
+     height: 100px;
+     z-index: 9 !important;
+     top: 10px;
+     left: 30px;
+     animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    from {rotate: 0deg;}
+  to {rotate: 360deg;}
+  
+}
+      }
+   .first img{
+    height: 100px;
+    top: -250px;
+    z-index: 9 !important;
+  
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="first">
+       <img src="./logo-png.png" alt="">
+      </div>
+   <div class="second">
+    <img src="./logo-png.png" id="logo" alt="Logo" />
+
+   </div>
+    <script src="https://nextparticle.nextco.de/nextparticle.min.js"></script>
+    <script>
+      nextParticle = new NextParticle({
+        image: document.all.logo,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        maxWidth: window.innerWidth * 0.8,
+        particleGap: 2
+      });
+      window.onresize = function () {
+        if (window.innerWidth > 600) {
+          nextParticle.width = window.innerWidth - 20;
+          nextParticle.height = window.innerHeight - 20;
+          nextParticle.start();
+        }
+      };
+    </script>
+  </body>
+</html>
